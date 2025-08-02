@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Currency History</title>
+ 
+  <!-- <script src="history.js" defer></script> External JavaScript -->
+   <link rel="stylesheet" href="h.css"> <!-- External CSS -->
+   <script src="h.js"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">💱 Currency Converter</span>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="h.html">History</a></li>
+               
+            </ul>
+        </div>
+    </nav>
+
+  <h1>Currency Origins and History</h1>
+
+  <label for="currency-select" class="select-label">Select a Currency:</label>
+  <select id="currency-select" onchange="showHistory()">
+     <option value="USD">USD</option>
+     <option value="EUR">EUR</option>
+    <option value="CAD">CAD</option>
+    <option value="GBP">GBP</option>
+    <option value="INR">INR</option>
+     <option value="AUD">AUD</option>
+     <option value="JPY">JPY</option>
+    <option value="CNY">CNY</option>
+    <option value="CHF">CHF</option>
+    <option value="NZD">NZD</option>
+    <option value="SGD">SGD</option>
+    <option value="ZAR">ZAR</option>
+    <option value="AED">AED</option>
+    <option value="BRL">BRL</option>
+    <option value="MXN">MXN</option>
+    <option value="RUB">RUB</option>
+    <option value="SEK">SEK</option>
+    <option value="NOK">NOK</option>
+    <option value="HKD">HKD</option>
+    <option value="KRW">KRW</option>
+  </select>
+
+  <div id="currency-info" style="display:none; margin-top: 20px;">
+  <p id="currency-symbol"></p>
+  <p id="currency-formed"></p>
+  <p id="currency-issued"></p>
+  <p id="currency-developed"></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* ---------------------- */
+/* Global Reset & Layout */
+/* ---------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #00c9ff, #92fe9d, #ff6a00, #e52e71);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------------ */
+/* Navigation Styling */
+/* ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+.navbar {
+  background: linear-gradient(to right, #2c3e50, #34495e);
+  padding: 16px 0;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0 0 12px 12px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f1c40f;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f1c40f;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #f1c40f;
+}
+
+/* -------------------- */
+/* Main Container Block */
+/* -------------------- */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+/* ---------------- */
+/* Headings & Text */
+/* ---------------- */
+h2 {
+  color: #1e3c72;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* --------------- */
+/* Form Styling */
+/* --------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+  color: #2f2f2f;
+}
+
+input,
+select {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+}
+
+/* --------------- */
+/* Button Styling */
+/* --------------- */
+button {
+  padding: 12px;
+  background: linear-gradient(90deg, #2980b9, #6dd5fa);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2471a3, #51b4e9);
+  transform: scale(1.03);
+}
+
+/* ------------------ */
+/* Responsive Design */
+/* ------------------ */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
